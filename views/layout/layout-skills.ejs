@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+<head>
+  <title><%= page.title %> &#8212; Skills</title>
+ 
+  <% if (typeof is_responsive === 'undefined') is_responsive = false %>
+  <% if (is_responsive === true) {  %>
+    <%- css('fresh_responsive.css') %>
+  <% } %>
+   
+  <%- css('fresh.css') %> 
+
+
+  <% if(typeof assets != "undefined" && assets.css) { %>
+    <% for(var filename in assets.css) { %>
+      <%- css(assets.css[filename]) %>
+    <% } %>
+  <% } %>
+
+    <!--[if lte IE 8]>
+      <script src="https://ajax.cdnjs.com/ajax/libs/json2/20110223/json2.js"></script>
+      <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>  
+    <![endif]-->
+  
+  <%- js('jquery-1.8.2.min.js') %>
+  <%- js(feature('injectExperiment') ? 'inject_0.4.0_a.js' : 'inject_0.4.0.js') %>
+  <%- js('base.js') %>
+</head>
+<body>
+
+
+  <%- partial('partials/header') %>
+  <%- body %>
+  <%- partial('partials/footer') %>
+
+  <%- include ./layout/partials/inject.ejs %>
+  
+  <% if(process.env.NODE_ENV == "production") { %>
+    <%- js('clientManifest.js') %>
+  <% } %>
+
+  <% if(typeof assets != "undefined"  && assets.js) { %>
+    <% for(var i=0, l=assets.js.length; i<l; i++) { %>
+      <%- js(assets.js[i]) %>
+    <% } %>
+  <% } %>
+  
+</body>
+</html>
+
+
