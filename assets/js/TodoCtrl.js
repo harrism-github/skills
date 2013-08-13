@@ -19,3 +19,5 @@ function TodoCtrl($scope) {
     $scope.formTodoText = '';
   };
 }
+
+TodoCtrl.$inject = ['$scope'];
