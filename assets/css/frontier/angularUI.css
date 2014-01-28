@@ -1,0 +1,22 @@
+article h4 {
+	margin-bottom: 0px;
+}
+article h5 {
+	font-weight: normal;
+	font-size: 90%;
+	margin-top: 20px;
+	margin-bottom: 10px;
+}
+article form {
+	font-size: 80%;
+}
+article button.remove-button {
+	margin-top: 30px;
+}
+article ul {
+	list-style-type: none;
+}
+article ul li .purchased-true {
+	text-decoration: line-through;
+	color: gray;
+}

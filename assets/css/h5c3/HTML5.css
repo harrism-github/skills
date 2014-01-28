@@ -1,0 +1,115 @@
+@font-face {
+  font-family: 'Englebert';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Englebert'), local('Englebert-Regular'), url(http://themes.googleusercontent.com/static/fonts/englebert/v1/5vhE18ztcHRcsYmBaZ6CaLO3LdcAZYWl9Si6vvxL-qU.woff) format('woff');
+}
+
+section {
+  margin-top: 40px;
+}
+figure img {
+    width: 35%;
+}
+figure figcaption p{
+    font-size: 10px;
+}
+#editable-content p{
+  font-size: 60%;
+  margin-top: -7px;
+}
+
+form div{
+  width:100%;
+  overflow: hidden;
+}
+form div div{
+  width:150px;
+  float:left;
+}
+
+form>div:first-child{
+  color: blue;
+}
+
+form div>input{
+  width:250px;
+  float:left;
+}
+form .state{
+  width: 100px;
+}
+form .zip{
+  width: 100px;
+}
+form input[type="tel"]{
+  width: 150px;
+}
+
+
+#multi-backgrounds div{
+  height:200px; 
+  width:100%;
+  background-image:
+    url(sheep.png),
+    url(grass.png);
+  background-repeat: no-repeat;
+  background-position: center bottom, left bottom;
+}
+#multi-backgrounds h3{
+  font-family: 'Englebert', sans-serif;
+}
+
+
+#opacity div.opacity-background{
+  height:500px; 
+  width:100%;
+  background-image:
+    url(yellowfield.png);
+  background-repeat: no-repeat;
+  position:relative;
+}
+#opacity div.opacity-box{
+  position:absolute;
+  top:100px;
+  bottom:100px;
+  left:100px;
+  right:100px;
+  background-color:#ffffff;
+  border:1px solid black;
+  opacity:0.6;
+  box-shadow: 10px 10px 5px #888888;
+}
+#opacity div.opacity-box p{
+  margin:0px;
+  padding:25px;
+}
+
+.gradientBox {
+background: linear-gradient(top,  #ffb260 0%,#ff7f13 100%); /* W3C */
+}
+
+#gradient div{
+  height:200px; 
+  width:100%;
+
+  background: -webkit-gradient(linear, left top, right top, from(#1a82f7), to(#2F2727));
+  background: -moz-linear-gradient(left, #2F2727, #1a82f7);
+}
+
+#transition div{
+  height:100px; 
+  width:50%;
+  background-color: #1a82f7; 
+  transition:width 2s, background-color 2s;
+  -webkit-transition:width 2s, background-color 2s; 
+}
+#transition div:hover{
+  width:100%;
+  background-color: #2F2727; 
+}
+
+
+
+
+

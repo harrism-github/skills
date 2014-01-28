@@ -1,0 +1,44 @@
+article img {
+  width: 250px;
+  height: 300px;
+  float: left;
+  margin: 0 25px 20px 0;
+  border: 1px solid lightgrey;
+
+}
+article section p {
+  display: block;
+  /*float left;*/
+  margin-left: 10px;
+  font-size: 12px;
+  line-height: 20px;
+}
+article section li {
+  font-size: 12px;
+}
+article section h3, article section h4, article section h5 {
+  margin: 20px 0 20px 0;
+}
+article section ul {
+  margin-top: -10px;
+}
+
+article section ul ul {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+article section .badge {
+  clear: left;
+  margin-top: 20px;
+}
+
+article section .badge>h3 {
+  border: 1px solid black;
+  height: 25px;
+  width: 100%;
+  padding-top: 5px;
+  padding-left: 5px;
+  background-color: #eee;
+  text-align: center;
+}

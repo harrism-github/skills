@@ -1,0 +1,89 @@
+<% page = { 'title' : 'H5/C3 HTML5', 'key': 'H5C3_PAGE_NAME'} %>
+<% assets = { 'css' : ['common.css','h5c3/HTML5.css'], 'js' : ['h5c3/HTML5.js'] } %>
+<%- partial('partials/h5c3-nav') %>
+
+<h2>The Use of 12 HTML5 Features</h2>
+
+<section>
+<h3> Using the "figure" and "figcaption" tags </h3>  
+<figure>
+  <img src="<%- img('h5c3_badge.jpg') %>" alt="H5/C3" />
+  <figcaption>
+    <p>This is a "figcaption" on an image inside of a "figure" tag.</p>
+   </figcaption>
+</figure>
+</section>
+
+<section id="editable-content">
+  <h3> To-Do List </h3>
+  <p>Demonstrating Editable Content</p>
+  <ul contenteditable="true">  
+    <li> Break mechanical cab driver. </li>  
+    <li> Drive to abandoned factory  
+    <li> Watch video of self </li>  
+  </ul>
+</section>
+
+<section>
+  <h3> HTML5 Form</h3>
+  <p>Demonstrating: Form Field Validation, Patterns, PlaceHolders, Email Input, Regular Expressions, Autofocus, guage element, output element, and local storage</p>
+  <form>
+    <div><div>First Name:</div><input type="text" id="firstName" name="firstName" value="Robert" required pattern="[a-zA-Z\s]{1,50}" title="Please enter only letters a-z and A-Z" autofocus></div>
+    <div><div>Last Name:</div><input type="text" id="lastName" name="lastName" value="Whiting" required pattern="[a-zA-Z\s]{1,50}" title="Please enter only letters a-z and A-Z"></div>
+    <div><div>Street:</div><input type="text" id="street" name="street" value="752 E 1870 N" required pattern="[a-zA-Z0-9\s]{1,50}" title="Please enter only letters a-z, A-Z, and 0-9"></div>
+    <div><div>City:</div><input type="text" id="city" name="city" value="Orem" required pattern="[a-zA-Z\s]{1,50}" title="Please enter only letters a-z and A-Z"></div>
+    <div><div>State:</div>
+      <select>
+        <option value="utah">Utah</option>
+        <option value="idaho">Idaho</option>
+        <option value="california">California</option>
+        <option value="Oregon">Oregon</option>
+      </select>
+    </div>
+    <div><div>Zip:</div><input class="zip" type="text" id="zip" name="zip" required pattern="[0-9\-]{5,10}" title="Please enter only numbers 0-9"></div>
+    <div><div>Telephone:</div><input class="telephone" type="tel" id="telephone" name="telephone" required placeholder="###.###.####" pattern="[0-9]{3}.[0-9]{3}.[0-9]{4}" title="Please enter only numbers 0-9 and periods in the format ###.###.####"></div>
+    <div>
+    <div>eMail:</div><input class="email" type="email" id="email" name="email" required pattern="([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z\.]{2,6})"></div>
+    <div><div>Awesome Gauge:</div><input type="range" name="guage" min="0" max="10" step="1" value="">
+      <output name="result"> </output>
+    </div>  
+    <button type="submit">Submit</button>    
+  </form>
+</section>
+
+<section>
+  <h3>Video</h3>
+  <p>
+    <video width="480" height="272" controls autoplay>
+      <source src="/img/big_buck_bunny_480x272.mp4" type="video/mp4">
+    </video>
+  </p>
+
+</section>
+
+<section id="multi-backgrounds">
+  <h3>Multiple Backgrounds - Using a Custom Font</h3>
+  <div></div>
+</section>
+
+<section id="opacity">
+  <h3>Opacity with Drop Shadow</h3>
+  <div class="opacity-background">
+    <div class="opacity-box">
+      <p>Something goes here.</p>
+    </div>  
+  </div>
+</section>
+
+<section id="gradient">
+  <h3>Demonstrating Gradient</h3>
+  <div></div>
+</section>
+
+<section id="transition">
+  <h3>Demonstrating Transition</h3>
+  <div></div>
+</section>
+  
+
+

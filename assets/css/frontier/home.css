@@ -1,0 +1,22 @@
+article img {
+	width: 300px;
+	height: 300px;
+	float: left;
+	margin: 0 20px 10px 0;
+}
+article section p {
+	display: block;
+	float left;
+	margin-left: 10px;
+	font-size: 12px;
+	line-height: 20px;
+}
+article section li {
+	font-size: 12px;	
+}
+article section h3, article section h4, article section h5 {
+	margin: 20px 0 5px 0;
+}
+article section ul {
+	margin-top: -10px;
+}

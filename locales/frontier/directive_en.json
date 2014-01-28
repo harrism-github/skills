@@ -1,0 +1,7 @@
+{
+  "page_purpose": "Custom Directive to return and display the time and to bind mouseover events.",
+  "server_date_time": "The server date and time is: ",
+  "date_label": "Date: ",
+  "time_label": "Time: ",
+  "fortune_label": "Fortune: "
+}

@@ -1,0 +1,43 @@
+#capture {
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: 40px;
+}
+
+.movieForm div {
+  width: 100%;
+  overflow: hidden;
+  height: auto;
+  margin: 0 0 10px 30px;
+}
+
+.movieForm div label {
+  width: 150px;
+  float: left;
+}
+
+.movieForm div input {
+  width: 300px;
+  height: 17px;
+  padding: 0 5px;
+}
+
+.movieForm div textarea {
+  width: 300px;
+  padding: 3px 5px;
+}
+
+.movieForm .rating {
+  width: 35px;
+}
+
+.movieForm div input:required,
+.movieForm div textarea:required{
+   border:1px solid green;
+}
+
+.movieForm button {
+  margin-left: 300px;
+  margin-top: 10px;
+}
+

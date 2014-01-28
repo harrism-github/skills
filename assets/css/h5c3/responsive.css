@@ -1,0 +1,49 @@
+
+/* article */
+article section{
+  width: 60%;
+  background-color: #E8E8E8;
+  margin-right: 5%;
+  float: left;
+  display: block;
+}
+article aside {
+  width: 35%;
+  background-color: #E8E8E8;
+  float: right;
+  display: block;
+}
+article img {
+  width: 100%;
+  display: block;
+}
+
+
+
+
+/* Media Query - tablet and phone */
+/* ============================== */
+@media screen and (max-width: 550px) 
+and (min-width: 421px)
+{
+  article section, article aside {
+    float: left;
+    clear: left;
+    margin: 0 0 10px;
+    width: 100%;
+  }
+}
+
+
+
+/* Media Query - phone */
+/* =================== */
+@media screen and (max-width: 420px) {
+  article section, article aside {
+    float: left;
+    clear: left;
+    margin: 0 0 10px;
+    width: 100%;
+  }
+}
+

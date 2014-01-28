@@ -1,0 +1,18 @@
+<% page = { 'title' : 'Frontier: Async', 'key': 'FRONTIER_PAGE_NAME'} %>
+<% assets = { 'css' : ['common.css','frontier/async.css'], 'js' : ['frontier/async.js'] } %>
+
+<%- partial('partials/frontier-nav') %>
+
+	<p>I implemented the asychronous programming requirement as part of the "custom directive tag" as demonstrated on the Directive tab.</p>
+	<p>The page makes 3 calls back to the server for the time, date, and fortune.  It first fetches the time and date, then it calls for the fortune passing the seconds value as an index into an array of fortunes.  I used jQuery deferred objects to coordinate the calls.  The jQuery ajax calls already return read only deferred objects that can be used in a $.when statement like this: </p>
+	<pre><code>$.when($scope.getDateDeferred, $scope.getTimeDeferred)
+		.done(function () {
+			// parse off the second from the time and pass it to the server to
+			fetch a fortune
+			var pattern = /:[0-9]*:(.*)[aApP][mM]/;
+			var second = (($scope.serverData.time).match(pattern))[1];
+			$scope.getFortuneFromServer(second);
+		})
+		.fail(function () { alert("error"); });
+	</code></pre>
+	<p>Note that after these two calls return, then a call to fetch the fortune is made passing the seconds just retreived.</p>

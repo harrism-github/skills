@@ -1,0 +1,288 @@
+<% page = { 'title' : 'PAGE_TITLE', 'key': 'QA_PAGE_NAME'} %>
+<% assets = { 'css' : ['common.css','qa/home.css'], 'js' : ['qa/home.js'] } %>
+
+<%- partial('partials/qa-nav') %>
+
+<img src="<%- img('QA.jpeg') %>" alt="QA" />
+<section>
+  <h3>Testing and Performance Skill Set</h3>
+  <p>Are you confident your customers are experiencing all the goodness you think they are? Testing and performance skills help you narrow the gap between what you think the customers get, and what they actually get.</p>
+  <p>Like the other skills, this one is divided into three levels:</p>
+  <p>
+  <ul>
+    <li>Apprentice — basic knowledge tests and a commitment to learn</li>
+    <li>Journeyman — good enough for daily professional work</li>
+    <li>Master — you've mastered this skill, produced a "masterpiece," and are living each day as a mentor and teacher
+      in your group
+    </li>
+  </ul>
+  </p>
+  <div class="badge">
+  <h3>Apprentice Badge</h3>
+  <h4>Resources:</h4>
+  <p>
+  <ul>
+    <li>The Continuous Delivery Book (many copies floating around the org)</li>
+    <li>The Test Driven JavaScript Development book (many copies floating around web dev.)</li>
+    <li><a href="http://visionmedia.github.io/mocha/">mocha</a></li>
+    <li><a href="http://chaijs.com/api/bdd/">chai</a></li>
+  </ul>
+  </p>
+
+  <p>
+    There are dozens of tutorials and refernces available on the web. Here are a few.
+  <ul>
+    <li>
+      <a href="https://developer.mozilla.org/en-US/docs/JavaScript">Mozilla Developer Network - JavaScript</a>
+    </li>
+    <li>
+      <a href="http://www.w3schools.com/js/default.asp">W3 Schools - JavaScript Tutorial</a>
+    </li>
+    <li>
+      <a href="http://www.tizag.com/javascriptT/">tizag.com - Javascript Tutorial</a>
+    </li>
+  </ul>
+  </p>
+  <h4>Prerequisites:</h4>
+  <p>
+  <ol>
+    <li>
+      Have built a simple web application in Frontier. See the Frontier Skill.
+    </li>
+    <li>
+      Have built the web application outlined in the HTML/CSS Journeyman Skill.
+    </li>
+  </ol>
+  </p>
+  <h4>Tasks:</h4>
+  <p>
+  <ol>
+    <li>
+      Create a module with its own name space and place all of your JavaScript functions and objects in it.
+    </li>
+    <li>
+      Objects:  Create an object using object literals and containing methods to hold the contents of your form fields.  (Work completed as part of the HTML/CSS Journeyman Skill).  Populate the form with values from the object.  Update the object with values from the form.
+    </li>
+    <li>
+      Functions: Define at least 2 functions, one inside an object and one in the global name space.  Add an inner function to both.  Demonstrate the proper use of "this".  Demonstrate the use and value of the "closures" that were created when you defined inner functions.  Demonstrate the use of prototypes by adding and using a custom method on a library function.
+    </li>
+    <li>
+      Events:  Demonstrate the use of event handling in your form so that the object you created in number 1 above is automatically updated when a change is made to a form field.  Minimize the number of event handlers you create.
+    </li>
+    <li>
+      Exceptions: Demonstrate catching and throwing an exception.
+    </li>
+    <li>
+      Regular Expressions: Demonstrate the use of regular expressions in your form validation on at least 3 fields.
+    </li>
+  </ol>
+  </p>
+  <p>
+    Note:  You are free to be creative and determine your own way to demonstrate the above tasks.  It would be great to talk over your plans with your manager!
+  </p>
+
+  <h4>Learning:</h4>
+  <p>You are expected to have a basic understanding of the following concepts:</p>
+  <h5>Testing Philosophy</h5>
+  <p>
+  <ul>
+    <li>Build Quality In — Read the section titled "Build Quality In" on page 27 of the Continuous Delivery book.
+      (Optionally read the previous section on page 26 titled, "If it Hurts, Do it More Frequently, and Bring the Pain
+      Forward.")&nbsp;Reflect and discuss what this means to you with your manager. Be sure to cover the following:<br>
+      <ul>
+        <li>What is the role of testing in an "agile" or "lean" development shop?</li>
+        <li>How does the lean principle, "Bring the pain forward," relate to testing?</li>
+        <li>What does this quote mean: "Testing is not a phase."</li>
+        <li>Who is responsible for testing? Who is principally accountable for it? Who must be consulted?<br>(The "Build
+          Quality In" section can be found in a preview of the book here:&nbsp;<a
+              href="http://books.google.com/books?id=6ADDuzere-YC&amp;pg=PT57&amp;source=gbs_toc_r&amp;cad=3#v=snippet&amp;q=%22build%20quality%20in%22&amp;f=false"
+              class="external-link" rel="nofollow">http://books.google.com/books?id=6ADDuzere-YC&amp;pg=PT57&amp;source=gbs_toc_r&amp;cad=3#v=snippet&amp;q=%22build%20quality%20in%22&amp;f=false</a>.
+          Go there and then search for "Build Quality In".)&nbsp;</li>
+      </ul>
+    </li>
+    <li>Comprehensive Automated Testing — Read the section titled "Create a Comprehensive Automated Test Suite" on page
+      60 of the Continuous Delivery book. Reflect and discuss with your manager the following points:<br>
+      <ul>
+        <li>When do we intend to run the three kinds of automated tests discussed?</li>
+        <li>Discuss the scope, purpose, and typical attributes of a unit test.</li>
+        <li>Discuss the scope, purpose, and typical attributes of a component test.</li>
+        <li>Discuss the scope, purpose, and typical attributes of an acceptance test.</li>
+        <li>Compare these test techniques to each other. &nbsp;What are their relative strengths? weaknesses?</li>
+        <li>How have you seen these types of testing applied in the past?</li>
+        <li>How do you expect to apply these types of testing in the future?</li>
+        <li>What is the relationship between acceptance testing and production application monitoring?</li>
+      </ul>
+    </li>
+    <li>TDD — Read the section titled "Test-Driven Development" on page 71 of the Continuous Delivery book. Discuss the
+      following:<br>
+      <ul>
+        <li>Which core outcome of continuous delivery is highlighted in the first paragraph? How is it facilitated by
+          unit testing?
+        </li>
+        <li>What is the author's stance on Test Driven Development?</li>
+      </ul>
+    </li>
+    <li>Test Type Chart — Thoroughly study the figure at the top of page 85 in the Continuous Delivery book. Discuss
+      with your manager:<br>
+      <ul>
+        <li>What quadrants of the figure do you expect to occasionally work in?</li>
+        <li>What quadrant of the figure would the Frontline program fall into?</li>
+        <li>What is a functional acceptance test? What is a non-functional acceptance test?</li>
+      </ul>
+    </li>
+    <li>Smoke Testing Anecdote — Read the box titled "Why Unit Tests Aren't Enough," on page 123. Discuss your
+      perspective.<br>
+      <ul>
+        <li>Compare a smoke test with a unit test. How is a smoke test more "user centric."</li>
+        <li>Compare a smoke test with a functional acceptance test. How are they alike? What is the single most
+          distinctive difference between the two?
+        </li>
+      </ul>
+    </li>
+    <li>Acceptance Test Ownership — Read the box titled "Who Owns Acceptance Tests," on page 215. Discuss with your
+      manager:<br>
+      <ul>
+        <li>Who owns (and is therefore responsible for the creation and maintenance of) functional acceptance tests?
+        </li>
+        <li>What are the outcomes of differentiated ownership?</li>
+        <li>What are the outcomes of collective ownership?</li>
+        <li>How do you intend to achieve the best outcomes of both models?</li>
+      </ul>
+    </li>
+    <li>Acceptance Testing the UI — Read the box titled, "Should Acceptance Tests Hit the UI," on page 88. &nbsp;Discuss
+      with your manager:<br>
+      <ul>
+        <li>Given that we are developing for the web and that many other UIs are developed using much more opaque
+          technologies, how does this advice apply here?
+        </li>
+        <li>From a testing perspective, name some benefits that come from us pushing business logic down—both pushing
+          complexity from browser to front-end server, and from front-end server to service api?
+        </li>
+      </ul>
+    </li>
+    <li>Testing Doubles — Read the section titled, "Using Test Doubles," from page 180 to 183 in the Continuous Delivery
+      book. Discuss with your manager:<br>
+      <ul>
+        <li>What distinction does the book make between a "stub" and a "mock?" How is this similar to other definitions
+          you've read? How is this different? (For example, compare to the definition found in the Test Driven
+          JavaScript Development book we read in book club.)
+        </li>
+      </ul>
+    </li>
+  </ul>
+  </p>
+
+  <h5>Testing Techniques and Technology</h5>
+  <p>
+  <ul>
+    <li>Unit Test Organization — Suites with <a href="http://visionmedia.github.io/mocha/" class="external-link"
+                                                rel="nofollow">mocha</a><br>
+      <ul>
+        <li>Write a unit test with at least one <code>describe</code>, one&nbsp;<code>it</code>, one&nbsp;<code>beforeEach</code>
+          or&nbsp;<code>before</code>, and one&nbsp;<code>afterEach</code> or&nbsp;<code>after</code>.
+        </li>
+        <li>Discuss the functionality of
+          each:&nbsp;<code>describe</code>,&nbsp;<code>it</code>,&nbsp;<code>before</code>,&nbsp;<code>beforeEach</code>,&nbsp;<code>after</code>,
+          and&nbsp;<code>afterEach</code>.
+        </li>
+        <li>Have some state maintained in the setup and tear-down functions of the suite, and accessed in the unit
+          test.
+        </li>
+      </ul>
+    </li>
+    <li>Verification — asserting things with <a href="https://github.com/LearnBoost/expect.js/" class="external-link"
+                                                rel="nofollow">expect.js</a>.
+    </li>
+    <ul>
+      <li>Use each of the following properly and be prepared to discuss their function:
+        <code>eql</code>,&nbsp;<code>be</code>,&nbsp;<code>throw</code>,&nbsp;<code>equal</code>,&nbsp;<code>match</code>.
+      </li>
+      <li>Be prepared to discuss the function of the following:&nbsp;<code>not,&nbsp;<code>deep</code></code></li>
+    </ul>
+  </ul>
+  </p>
+  <div><h5>Performance Techniques</h5>
+    <p>
+      <ul>
+        <li>Take a measurement<br>
+          <ul>
+            <li>Implement some operation or feature.</li>
+            <li>Create an alternate implementation that is functionally identical but has distinct performance
+              characteristics
+            </li>
+            <li>Create a unit test suite that demonstrates the relative performance characteristics of your two
+              implementations.
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </p>
+  </div>
+
+  <h4>Demonstration:</h4>
+  <p>You can demonstrate your knowledge by employing the techniques described above in a test suite for your portfolio app. You must also have a discussion with your manager covering the topics outlined above.</p>
+
+  </div>
+
+  <div class="badge">
+  <h3>Journeyman Badge</h3>
+  <h4>Resources:</h4>
+  <p>
+    ...
+  </p>
+  <h4>Prerequisites:</h4>
+  <p>
+  ...
+  </p>
+  <h4>Learning and Demonstration:</h4>
+
+  <p>In addition to the concepts for an apprentice, you are expected to have an understand and demonstrate the following
+    concepts:</p>
+  <ul>
+    <li>travisci and how to hook it up to a github project.</li>
+    <li><span style="color: rgb(51,51,51);">Using nested&nbsp;<code>describe</code> blocks to do multiple levels of shared set-up and tear-down in a &nbsp;test suite.</span>
+    </li>
+    <li><span style="color: rgb(51,51,51);">Create a client-side test suite using <a
+        href="http://karma-runner.github.io/0.8/index.html" class="external-link" rel="nofollow">Karma</a> that runs as part of&nbsp;<code>npm
+      test</code>.</span></li>
+    <li><span style="color: rgb(51,51,51);">create a test suite validating an angular directive.</span></li>
+    <li><span style="color: rgb(51,51,51);">use sinon to create a test double, use it, and use sinon's assertions to verify some interaction made with the double.</span>
+    </li>
+    <li><span style="color: rgb(51,51,51);">use sinon to replace a part of the system with a test double and then restore the original implementation.<br>&nbsp;</span>
+    </li>
+  </ul>
+  <h4>Project/Production Work:</h4>
+  <p>You can demonstrate your skill by passing off work you have done either in a personal project or in your production work.</p>
+  <p>Project: &nbsp;Create a ... The page should ... &nbsp;You may use ... &nbsp;You will be judged on ...</p>
+  </div>
+
+  <div class="badge">
+    <h3>Master Badge</h3>
+
+    <p>The masters level consists of three achievements:</p>
+    <ol>
+      <li>acting in the role of a mentor and teacher,&nbsp;</li>
+      <li>advanced learning, and</li>
+      <li>project work that furthers (where possible) our discipline.</li>
+    </ol>
+    <h4><strong>Mentor/Teacher:</strong></h4>
+
+    <p>Serve in the role of a mentor or teacher for a period of at least 6 months.</p>
+
+    <h4><strong>Study Plan:</strong></h4>
+
+    <p>Create a study plan that outlines the advanced concept(s) that you wish to research. &nbsp;Have your study plan
+      approved by your manager or designee. &nbsp;Complete your study and present your learning to a gathering of web
+      developers.</p>
+
+    <h4><strong>Project Plan:</strong></h4>
+
+    <p>Create a project plan that outlines what you wish to build, why it is important, and how it will benefit our
+      discipline. &nbsp;Have your project plan approved by your manager or designee. &nbsp;Complete your project and
+      present your learning to a gathering of web developers.</p>
+  </div>
+
+</section>
+
+
+

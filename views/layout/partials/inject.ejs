@@ -1,0 +1,49 @@
+<% if(deployedInProd()) { %>
+  <%- js('clientManifest.js') %>
+<% } %>
+
+<script type="text/javascript">
+  <% if(deployedInProd()) { %>
+    Inject.setModuleRoot("<%= cdn('/js/modules') %>");
+    
+    function loadCSS(path) {
+      return FS.File.loadCSS(path);
+    }
+    
+    <% if( cdn('/').length > 1 ) { %>
+      Inject.setCrossDomain({
+        relayFile: "<%= cdn('/inject_relay_0.4.0a.20130130.html') %>",
+        relaySwf: "<%= cdn('/inject_relay_0.4.0a.20130130.swf') %>"
+      });
+    <% } %>
+    Inject.setExpires(0);//Don't store files in localStorage
+    Inject.clearCache();//Have to clear because inject will cache no matter what the time is set to.  Since we name our files based on a hash, the expire time will only apply if the file hasn't changed names.
+
+  <% } else { %>
+
+    Inject.setModuleRoot("/js/modules");
+    Inject.clearCache();
+
+    function loadCSS(path) {
+      return FS.File.loadCSS(path);
+    }
+
+  <% } %>
+
+  <% /* Manifest should be used in production mode for resolving hashed module names */ %>
+  if(window.manifest) {
+    if(window.debugOn) {
+      console.log("Need to change manifest over to debug versions");
+      for(var k in manifest.js){
+        manifest.js[k] = manifest.js[k].replace(".js", "_raw.js");
+      }
+    }
+    Inject.manifest(manifest.js);
+  }
+  console.log("Controls have been configured");
+
+  $(document).ready(function() {
+    // this used to be document.body....changed to allow <body> to be a control
+    FS.Controls.init(document);
+  });
+</script>

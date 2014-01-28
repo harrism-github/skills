@@ -1,0 +1,160 @@
+<% page = { 'title' : 'PAGE_TITLE', 'key': 'JAVASCRIPT_PAGE_NAME'} %>
+<% assets = { 'css' : ['common.css','javascript/home.css'], 'js' : ['javascript/home.js'] } %>
+
+<%- partial('partials/javascript-nav') %>
+
+  <img src="<%- img('JS.png') %>" alt="H5/C3" />
+	<section>
+		<h3>HTML5 and CSS3 Skill Set</h3>
+		<p>
+			JavaScript, along with HTML and CSS, are the bread and butter of web development.  To be a successful web developer we must master the concepts and syntax of these technologies.  Earning the apprentice level means that you have accumulated knowledge regarding these important technologies.  Earning the journeyman level means that you have the knowledge and skill necessary for day-to-day production work. Earning a master level means that you are acting as a mentor and teacher, and have demonstrated an advanced level of understanding thru study and projects.
+		</p>
+		<h4>You are expected to have a basic understanding of the following concepts:</h4>
+		<p>
+			JavaScript Basics: grammar and variables, data types, functions, scope, objects, properties and methods, arrays, logic and truthiness, operators, conditional operation, ternary operator, inclusion in HTML, and DOM core.
+		</p>
+		<p>
+			JavaScript Advanced Topics: function expressions and declarations, function objects and literals, function invocation patterns, recursion, closures, callbacks, event handling, objects – literals, reference, exceptions, regular expressions, debugging, AJAX, prototype, reflection, and module pattern.
+		</p>
+		<h3>Apprentice Badge:</h3>
+		<h5>Resources:</h5>
+		<p>
+			There are dozens of tutorials and refernces available on the web. Here are a few.
+			<ul>
+				<li>
+					<a href="https://developer.mozilla.org/en-US/docs/JavaScript">Mozilla Developer Network - JavaScript</a>
+				</li>
+				<li>
+					<a href="http://www.w3schools.com/js/default.asp">W3 Schools - JavaScript Tutorial</a>
+				</li>
+				<li>
+					<a href="http://www.tizag.com/javascriptT/">tizag.com - Javascript Tutorial</a>
+				</li>
+			</ul>
+		</p>
+		<h5>Prerequisites:</h5>
+		<p>
+			<ol>
+				<li>
+					Have built a simple web application in Frontier. See the Frontier Skill.
+				</li>
+				<li>
+					Have built the web application outlined in the HTML/CSS Journeyman Skill. 
+				</li>
+			</ol>
+		</p>
+		<h5>Tasks:</h5>
+		<p>
+			<ol>
+				<li>
+					Create a module with its own name space and place all of your JavaScript functions and objects in it.
+				</li>
+				<li>
+					Objects:  Create an object using object literals and containing methods to hold the contents of your form fields.  (Work completed as part of the HTML/CSS Journeyman Skill).  Populate the form with values from the object.  Update the object with values from the form.  
+				</li>
+				<li>
+					Functions: Define at least 2 functions, one inside an object and one in the global name space.  Add an inner function to both.  Demonstrate the proper use of "this".  Demonstrate the use and value of the "closures" that were created when you defined inner functions.  Demonstrate the use of prototypes by adding and using a custom method on a library function.
+				</li>
+				<li>
+					Events:  Demonstrate the use of event handling in your form so that the object you created in number 1 above is automatically updated when a change is made to a form field.  Minimize the number of event handlers you create.
+				</li>
+				<li>
+					Exceptions: Demonstrate catching and throwing an exception.
+				</li>
+				<li>
+					Regular Expressions: Demonstrate the use of regular expressions in your form validation on at least 3 fields.
+				</li>
+			</ol>
+		</p>
+		<p>
+			Note:  You are free to be creative and determine your own way to demonstrate the above tasks.  It would be great to talk over your plans with your manager!
+		</p>
+
+		<h3>Journeyman Badge:</h3>
+		<h5>Resources:</h5>
+		<p>
+			There are dozens of tutorials and refernces available on the web. Here are a few.
+			<ul>
+				<li>
+					JavaScript: The Good Parts
+					<ul class="wspace">
+						<li>	
+							<a href="http://www.amazon.com/JavaScript-Good-Parts-Douglas-Crockford/dp/0596517742">Book</a>
+						</li>
+						<li>
+							<a href="http://eleventyone.done.hu/OReilly.JavaScript.The.Good.Parts.May.2008.pdf ">PDF</a>
+						</li>
+						<li>
+							<a href="http://www.youtube.com/watch?v=hQVTIJBZook">Video</a>
+					</li>
+					</ul>
+				</li>
+				<li>
+					<a href="https://developer.mozilla.org/en-US/docs/JavaScript">Mozilla Developer Network - JavaScript</a>
+				</li>
+				<li>
+					<a href="http://benalman.com/news/2010/11/immediately-invoked-function-expression/">BEN ALMAN - Immediately-Involked Function Expression</a>
+				</li>
+				<li>
+					<a href="http://kangax.github.com/nfe/">Kangax - Named Function Expressions Demystified</a>
+				</li>
+				<li>
+					<a href="http://www.microsoft.com/learning/en/us/exam.aspx?id=70-480">Exam 70-480: Programming in HTML5 with JavaScript and CSS3</a>
+				</li>
+				<li>
+					<a href="http://www.expertrating.com/courseware/JavaScriptCourse/JavaScript-Basic-Concepts-2.asp">ExpertRating - JavaScript Tutorial - Basic JavaScript Concepts</a>
+				</li>
+				<li>
+					<a href="http://www.tutorialspoint.com/javascript/javascript_quick_guide.htm">Tutorial Point - JavaScript Quick Guide</a>
+				</li>
+			</ul>
+		</p>
+		<h5>Prerequisites:</h5>
+		<p>
+			<ol>
+				<li>
+					Have earned the JavaScript Apprentice badge.
+				</li>
+			</ol>
+		</p>		
+		<h5>Tasks:</h5>
+		<p>
+			<ol>
+				<li>
+					AJAX: Use AJAX to retrieve and save your form data back to the server.  Your server-side controller can mock sending and receiving JSON data. Demonstrate the use of closures to make state available to your AJAX call back functions.
+				</li>
+				<li>
+					JSON: Pass back and forth a JSON structure containing the field values.
+				</li>
+				<li>
+					Web Worker: Create a web worker that communicates to the server in the background.  Set the worker's "onmessage" property to an event handler.  Demonstrate passing messages thru this mechanism to/from the server. <a href="https://developer.mozilla.org/en-US/docs/DOM/Using_web_workers">Mozilla - Using Web Workers</a>
+				</li>
+				<li>
+					Web Sockets:  Open up a web socket with the server.  Demonstrate sending/receiving messages to/from the server. <a href="http://www.developerfusion.com/article/143158/an-introduction-to-websockets/">DeveloperFusion - An Introduction To WebSockets</a>
+				</li>
+			</ol>
+		</p>
+		<p>
+			Note:  You are free to be creative and determine your own way to demonstrate the above tasks.  It would be great to talk over your plans with your manager!
+		</p>
+
+		<h3>Master Badge:</h3>
+		<p>
+			The master's level consists of three achievements; acting as a mentor and teacher, advanced learning, and project work that furthers where possible our discipline.
+		</p>
+		<h5>Mentor/Teacher</h5>
+		<p>
+			Serve in the role of a mentor or teacher for a period of at least 6 months.
+		</p>
+		<h5>Study Plan</h5>
+		<p>
+			Create a study plan that outlines the advanced concept(s) that you wish to research.  Have your study plan approved by your manager or designee.  Complete your study and present your learning to a gathering of web developers.
+		</p>
+		<h5>Project Plan</h5>
+		<p>
+			Create a project plan that outlines what you wish to build, why it is important, and how it will benefit our discipline.  Have your project plan approved by your manager or designee.  Complete your project and present your learning to a gathering of web developers.
+		</p>
+	</section>
+
+
+

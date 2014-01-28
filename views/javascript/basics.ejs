@@ -1,0 +1,59 @@
+<% page = { 'title' : 'PAGE_TITLE', 'key': 'JAVASCRIPT_PAGE_NAME'} %>
+<% assets = { 'css' : ['common.css','javascript/basics.css'], 'js' : ['javascript/basics.js'] } %>
+
+<%- partial('partials/javascript-nav') %>
+
+<div id="capture">
+	<p>
+    <h1>Demonstrating:</h1>
+    <ul>
+      <li>JS Module - MOVIE defined in basics.js</li>
+      <li>Objects</li>
+      <li>Functions - public and private.</li>
+      <li>Prototype - add new functionality, hash, to a String library method.</li>
+      <li>Event Handling and Bubbling.  When an input field changes, an event is thrown on the field and it is caught on the form as it bubbles up.  The data is then copied into a Movie object.</li>
+      <li>Exceptions (Enter "throw exception" into one of the text fields)</li>
+      <li>Regular Expressions - HTML% patterns on the input fields</li>
+      <li>HTML5 Form Validation - HTML5</li>
+    </ul>
+  </p>
+  <p>
+  <h1>Movie Form:</h1>
+  </p>
+  <form class='movieForm'>
+    <div>
+      <label for="movieTitle">Movie Title:</label>
+      <input type="text" class="movieTitle" id="movieTitle" name="movieTitle" required pattern=".*{1,120}" title="up to 120 characters of text">
+    </div>
+    <div>
+      <label for="releaseYear">Year Released:</label>
+      <input type="text" class="releaseYear" id="releaseYear" name="releaseYear" required pattern="[1-9]{1}[0-9]{3}" title="YYYY">
+    </div>
+    <div>
+      <label for="rating">Rating:</label>
+      <input type="number" min="0" max="10" class="rating" id="rating" name="rating" required>
+    </div>
+    <div>
+      <label for="genre">Genre:</label>
+      <input type="text" class="genre" id="genre" name="genre" required pattern="[A-Za-z,-\s]{1,50}" title="comma-separated a-z A-Z whitespace only">
+    </div>
+    <div>
+      <label for="description">Description:</label>
+      <textarea class="description" id="description" name="description" rows="5" required pattern=".*\n]{1,250}" title="250 characters"></textarea>
+    </div>
+    <div>
+      <label for="director">Director:</label>
+      <input type="text" class="director" id="director" name="director" required pattern="[a-zA-Z\s]{1,50}" title="a-z A-Z and whitespace only">
+    </div>
+    <div>
+      <label for="stars">Stars:</label>
+      <input type="text" class="stars" id="stars" name="stars" required pattern="[a-zA-Z,\s]{1,50}" title="comma-separated a-z A-Z whitespace only">
+    </div>
+    <div>
+      <label for="trailerUrl">Trailer URL:</label>
+      <input type="url" class="trailerUrl" id="trailerUrl" name="trailerUrl">
+    </div>
+
+    <button type="submit">Submit</button>
+  </form>
+</div>

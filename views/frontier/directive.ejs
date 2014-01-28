@@ -1,0 +1,11 @@
+<% page = { 'title' : 'Frontier: Angular', 'key': 'FRONTIER_PAGE_NAME'} %>
+<% assets = { 'css' : ['common.css','frontier/angularUI.css'], 'js' : ['inject_0.4.0_a.js','angular-1.0.3.js','frontier/directiveUI.js'] } %>
+
+<%- partial('partials/frontier-nav') %>
+<section ng-app="myApp" ng-controller="myCtrl">
+	
+	<h3><%- t('page_purpose')%></h3>
+	<p my-highlight><%- t('server_date_time')%><the-time></the-time></p>
+
+</section>
+
