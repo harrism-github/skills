@@ -1,8 +1,14 @@
 {
-    "groups": {
-        "devs": ["stephen.lynn"]
-    },
-    "experiments": {
-        "featureOne": "devs"
+  "groups": {
+    "devs": ["stephen.lynn"]
+  },
+  "experiments": {
+    "timeTag": true,
+    "featureOne": "devs"
+  },
+  "envs": {
+    "prod": {
+      "timeTag": false
     }
+  }
 }

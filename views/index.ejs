@@ -1,16 +1,50 @@
-<% page = { 'title' : 'Skills Development App', 'key': 'INDEX_PAGE_NAME'} %>
-<% assets = {
-    "css": ["hf.css", "skills.css"], "js": []} %>
+<% page = { 'title' : 'PAGE_TITLE', 'key': 'INDEX_PAGE_NAME'} %>
+<% assets = { 'css' : ['common.css','index.css'], 'js' : ['common.js'] } %>
 
-<div id="main" class="container">
-  <div class="no-layout">
-    <h1 class="font21 serif"><%- t('welcome_title')%></h1>
-    <section class="basic">
-      <p>
-        <%- t('welcome_message')%> <img src="<%= img('icon/arrow_left_white_11x11.png') %>" alt="">
-      </p>
+<meta name="viewport" content="width=device-width, minimumscale=1.0, maximum-scale=1.0" />
 
-      <a href="sample" class="btn btn-water"><%- t('sample_link')%></a>
+<div id="content">
+  <header>
+    <img src="<%- img('MikeHarris.png') %>" alt="logo" />
+    <nav>
+      <ul>
+        <li class="selected"><a href="#" title="Overview">Overview</a></li>
+        <li><a href="#" title="Frontier">Frontier</a></li>
+        <li><a href="#" title="HTML5/CSS3">H5/C3</a></li>
+        <li><a href="#" title="JavaScript">JavaScript</a></li>
+        <li><a href="#" title="QA">QA</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <article>
+    <nav>
+      <ul>
+        <li class="selected"><a href="#" title="Frontier Home">Home</a></li>
+        <li><a href="#" title="Angular">Angular</a></li>
+        <li><a href="#" title="Experiments">Experiments</a></li>
+        <li><a href="#" title="Async">Async</a></li>
+      </ul>
+    </nav>
+    <img src="<%- img('web-dev.jpg') %>" alt="banner" />
+    <section>
+      <h1><%- t('main_headline')%></h1>
+      <p><%- t('main_section1')%></p>
+      <p><%- t('main_section2')%></p>
     </section>
-  </div>
+    <aside>
+      <h1><%- t('aside_headline')%></h1>
+      <p><%- t('aside_section1')%></p>
+    </aside>
+  </article>
+
+  <footer>
+    <ul>
+      <li>About</li>
+      <li>Blog</li>
+      <li>Feedback</li>
+    </ul>
+  </footer>
+
 </div>
+

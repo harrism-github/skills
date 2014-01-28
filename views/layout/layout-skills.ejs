@@ -1,8 +1,18 @@
 <!doctype html>
-<html>
+<html >
 <head>
   <title><%= page.title %> &#8212; Skills</title>
- 
+
+  <script>
+    window.appName = "skills";
+  </script>
+  <% if (typeof is_responsive === 'undefined') is_responsive = false %>
+  <% if (is_responsive === true) {  %>
+    <%- css('fresh_responsive.css') %>
+  <% } %>
+   
+  <%- css('fresh.css') %> 
+
 
   <% if(typeof assets != "undefined" && assets.css) { %>
     <% for(var filename in assets.css) { %>
@@ -19,17 +29,16 @@
   <%- js('inject_0.4.0_a.js') %>
   <%- js('base.js') %>
 </head>
-<body>
+<body id="pagekey__<%- appName %>__<%= pageBodyId(page.key) %>">
 
   <%- partial('partials/header') %>
-
-  <div class="main-content">
-      <%- body %>
-  </div>
-
+  <%- body %>
   <%- partial('partials/footer') %>
 
-  <% if(process.env.NODE_ENV == "production") { %>
+  <!-- included for controls support -->
+  <%- include ../../node_modules/theme-engage/views/partials/inject.ejs %>
+
+   <% if(process.env.NODE_ENV == "production") { %>
     <%- js('clientManifest.js') %>
   <% } %>
 
