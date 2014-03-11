@@ -103,8 +103,6 @@ footer li {
 }
 
 
-
-
 /* Media Query - tablet */
 /* ==================== */
 @media screen and (max-width: 768px) 
@@ -145,7 +143,8 @@ and (min-width: 421px)
   }
   header nav ul {
     padding: 0px;
-  }header nav li {
+  }
+  header nav li {
     display: inline;
     margin-left: 15px;
     font-size: 130%;
@@ -175,7 +174,8 @@ and (min-width: 421px)
   }
   header nav ul {
     padding: 0px;
-  }header nav li {
+  }
+  header nav li {
     margin: 0;
     background: #efefef;
     display: block;
@@ -196,7 +196,8 @@ and (min-width: 421px)
     width: 150px;
     display: block;
     overflow: auto;
-  }header nav{
+  }
+  header nav{
     float: left;
     clear: left;
     margin: 0 0 10px;

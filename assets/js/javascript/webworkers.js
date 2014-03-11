@@ -1,57 +1,90 @@
-function draw_clock(){
-    canvas = Raphael("clock_id",200, 200);
-    var clock = canvas.circle(100,100,95);
-     clock.attr({"fill":"#f5f5f5","stroke":"#444444","stroke-width":"5"})  
-     var hour_sign;
-    for(i=0;i<12;i++){
-        var start_x = 100+Math.round(80*Math.cos(30*i*Math.PI/180));
-        var start_y = 100+Math.round(80*Math.sin(30*i*Math.PI/180));
-        var end_x = 100+Math.round(90*Math.cos(30*i*Math.PI/180));
-        var end_y = 100+Math.round(90*Math.sin(30*i*Math.PI/180));    
-        hour_sign = canvas.path("M"+start_x+" "+start_y+"L"+end_x+" "+end_y);
-    }    
-    hour_hand = canvas.path("M100 100L100 50");
-    hour_hand.attr({stroke: "#444444", "stroke-width": 6});
-    minute_hand = canvas.path("M100 100L100 40");
-    minute_hand.attr({stroke: "#444444", "stroke-width": 4});
-    second_hand = canvas.path("M100 110L100 25");
-    second_hand.attr({stroke: "#444444", "stroke-width": 2}); 
-    var pin = canvas.circle(100, 100, 5);
-    pin.attr("fill", "#000000");    
+$(document).ready(function () {
+  $("header a[href$='javascript/home']").parent().addClass('selected');
+  $("article a[href$='javascript/webworkers']").parent().addClass('selected');
+});
+
+var $startBtn = $('.startBtn').removeAttr("disabled");
+var $pauseBtn = $('.pauseBtn').attr('disabled', 'disabled');
+var $stopBtn = $('.stopBtn').attr('disabled', 'disabled');
+var $speedUpBtn = $('.speedUpBtn').attr('disabled', 'disabled');
+var $slowDownBtn = $('.slowDownBtn').attr('disabled', 'disabled');
+var $disabledBtn = $('.disableBtn').removeAttr("disabled");
+
+var worker = new Worker('/js/javascript/prime.js');
+worker.addEventListener('message', function (evt) {
+  switch (evt.data.cmd) {
+    case 'prime':
+      $('.primenum').html(evt.data.primeNum);
+      $('.primescnt').html(evt.data.numOfPrimes);
+      break;
+    case 'rec':
+      $('.recursion').html(evt.data.value);
+      break;
+    case 'start':
+    case 'pause':
+    case 'resume':
+    case 'stop':
+    case 'speedup':
+    case 'slowdown':
+    case 'disable':
+    default:
+      $('.command').html(evt.data.msg);
+  }
+
+});
+
+function startPrimeNumberSearch() {
+  $startBtn.attr('disabled', 'disabled');
+  $pauseBtn.removeAttr('disabled');
+  $stopBtn.removeAttr('disabled');
+  $speedUpBtn.removeAttr('disabled');
+  $slowDownBtn.removeAttr('disabled')
+  worker.postMessage({'cmd': 'start', 'msg': "Searching for prime numbers..."});
 }
 
-function update_clock(time){
-    var hours = time.hours;
-    var minutes = time.minutes;
-    var seconds = time.seconds;
+function pauseResumePrimeNumberSearch() {
+  if ($pauseBtn.hasClass('resume')) {
+    //resume click
+    $pauseBtn.html("Pause");
+    $pauseBtn.removeClass('resume');
+    $speedUpBtn.removeAttr('disabled');
+    $slowDownBtn.removeAttr('disabled');
+    worker.postMessage({'cmd': 'resume', 'msg': "Resuming prime number search..."});
+  }
+  else {
+    //pause click
+    $pauseBtn.html("Resume");
+    $pauseBtn.addClass("resume");
+    $speedUpBtn.attr('disabled', 'disabled');
+    $slowDownBtn.attr('disabled', 'disabled');
 
-    hour_hand.rotate(30*hours+(minutes/2.5), 100, 100);
-    minute_hand.rotate(6*minutes, 100, 100);
-    second_hand.rotate(6*seconds, 100, 100);
-
-    // // make an ajax call to get the time from the server
-    // var jqxhr = $.get("http://localhost:5000/frontier/getServerTime", function(data) {
-    //     var hours = data.hours;
-    //     var minutes = data.minutes;
-    //     var seconds = data.seconds;
-    //     hour_hand.rotate(30*hours+(minutes/2.5), 100, 100);
-    //     minute_hand.rotate(6*minutes, 100, 100);
-    //     second_hand.rotate(6*seconds, 100, 100);
-    //   })
-    //   .fail(function() { alert("error"); 
-    // });
+    worker.postMessage({'cmd': 'pause', 'msg': "Paused prime number search"});
+  }
 }
 
-$(document).ready(function() {
-	$("header a[href$='javascript/home']").parent().addClass('selected');
-	$("article a[href$='javascript/webworkers']").parent().addClass('selected');
+function stopPrimeNumberSearch() {
+  $stopBtn.attr('disabled', 'disabled');
+  $pauseBtn.attr('disabled', 'disabled');
+  $speedUpBtn.attr('disabled', 'disabled');
+  $slowDownBtn.attr('disabled', 'disabled');
+  $startBtn.removeAttr('disabled');
+  worker.postMessage({'cmd': 'stop', 'msg': "Stopped prime number search"});
+}
 
-  draw_clock();
+function speedUpPrimeNumberSearch() {
+  worker.postMessage({'cmd': 'speedup', 'msg': "Sped up prime number search"});
+}
+function slowDownPrimeNumberSearch() {
+  worker.postMessage({'cmd': 'slowdown', 'msg': "Slowed down prime number search"});
+}
 
-  var worker = new Worker("/js/javascript/clock.js");
-  worker.addEventListener('message', function(e) {
-      //console.log('Worker said: ', e.data);
-      update_clock(e.data)
-    }, false);
+function disableWorker() {
+  $startBtn.attr('disabled', 'disabled');
+  $pauseBtn.attr('disabled', 'disabled');
+  $stopBtn.attr('disabled', 'disabled');
+  $speedUpBtn.attr('disabled', 'disabled');
+  $slowDownBtn.attr('disabled', 'disabled');
+  $disabledBtn.attr('disabled', 'disabled');
+  worker.postMessage({'cmd': 'disable', 'msg': "Prime number search worker disabled"});
+}
 
-  });

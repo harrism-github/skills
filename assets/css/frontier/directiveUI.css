@@ -1,0 +1,8 @@
+section .date,
+section .time {
+  color: green;
+}
+
+section .zodiac {
+  color: blue;
+}

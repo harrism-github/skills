@@ -1,0 +1,8 @@
+.experiments p,
+.experiments ul {
+  font-size: 80%;
+}
+
+.ex_extraParEx .enhance {
+  color: red;
+}

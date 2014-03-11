@@ -8,7 +8,8 @@
     "theme-engage": "git+https://github.com/fs-webdev/theme-engage.git",
     "woodruff": "git+https://github.com/fs-webdev/woodruff.git",
     "frontier-build-tools": "git+https://github.com/fs-webdev/frontier-build-tools.git",
-    "startup": "~0.1.12"
+    "startup": "~0.3.0",
+    "socket.io": "~0.9.16"
   },
   "devDependencies": {
     "supertest": "~0.7.0",

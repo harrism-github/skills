@@ -3,6 +3,25 @@
 
 <%- partial('partials/frontier-nav') %>
 
-	<p>I have added an experiment to turn one or off the "custom tag directive" coded as part of the Directive exercise (see previous tab).</p>
-	<p>You can turn the experiment on and off by adding "?listEx" to the end of the page Directive page url.</p>
+<section class="experiments">
 
+<p>Frontier Experiments are implemented using four different syntaxes depending on whether you are working in server-side .js files, server-side .ejs file, client-side .js files or client-side .css files.</p>
+
+<ul>
+<li>On the server in an .ejs file, the following syntax is used:  &lt;% if (feature("experimentId")) %>. </li>
+<li>On the server in a .js file, you must access feature through the request object:  req.feature("experimentId")).</li>
+<li>On the client in .js, you must use the showEx method on the FS object: if (FS.showEx("experimentId").</li>
+<li class="enhance">On the client in .css, you can use the ".ex_experimentName" class selector to apply a css class only when the experiment is on.</li>
+</ul>
+
+<p>To demonstrate experiments from server-side .ejs and .js and client-side .js, I have added a "timeEx" experiment to turn the time directive on or off.</p>
+
+<p>To demonstrate experiments from server-side .ejs files and client-side .css, I have added an experiment to turn on or off an extra paragraph on this page strictly from the experiments.ejs file and to turn the text on the css bullet item above red.</p>
+<p>You can turn the experiment on and off by adding "?listEx" to the end of the page Experiments page url, refresh the page.  A list of experiements will appear.  Find the "extraParEx" check box, set it as desired and then refresh the page. </p>
+
+
+<%  if (feature("extraParEx")) {%>
+  <p><b>This is an example of using Frontier Experiments in the .ejs file using the require("ExperimentId") syntax.  This paragraph is only visible when the"extraParEx" experiment has been enabled.</b></p>
+<% } %>
+
+<section>

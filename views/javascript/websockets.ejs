@@ -1,6 +1,18 @@
 <% page = { 'title' : 'PAGE_TITLE', 'key': 'JAVASCRIPT_PAGE_NAME'} %>
-<% assets = { 'css' : ['common.css','javascript/websockets.css'], 'js' : ['javascript/websockets.js'] } %>
+<% assets = { 'css' : ['common.css','javascript/websockets.css'], 'js' : ['socket.io.0.8.4.js', 'javascript/websockets.js'] } %>
 
 <%- partial('partials/javascript-nav') %>
 
-  <p>Under Construction</p>
+<section class="websocket">
+
+  <h3>News Broadcasts</h3>
+  <div><textarea class="view-news" readonly></textarea></div>
+
+  <h3>Submit News</h3>
+  <div><textarea class="user-input"></textarea></div>
+
+  <button class="reportBtn" onclick="reportNews()">Submit</button>
+<!--  <button class="connectBtn" onclick="connectToNews()">Connect</button> -->
+  <button class="disconnectBtn" onclick="disconnectFromNews()">Disconnect</button>
+
+</section>

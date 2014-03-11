@@ -3,12 +3,13 @@
     "devs": ["stephen.lynn"]
   },
   "experiments": {
-    "timeTag": true,
-    "featureOne": "devs"
+    "extraParEx": 0,
+    "timeEx": false
   },
   "envs": {
     "prod": {
-      "timeTag": false
+      "extraParEx": 0,
+      "timeEx": false
     }
   }
 }

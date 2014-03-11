@@ -6,7 +6,6 @@ article img {
 }
 article section p {
 	display: block;
-	float left;
 	margin-left: 10px;
 	font-size: 12px;
 	line-height: 20px;

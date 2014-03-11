@@ -1,10 +1,22 @@
 <% page = { 'title' : 'PAGE_TITLE', 'key': 'JAVASCRIPT_PAGE_NAME'} %>
-<% assets = { 'css' : ['common.css','javascript/webworkers.css'], 'js' : ['javascript/webworkers.js','javascript/raphael-min.js'] } %>
+<% assets = { 'css' : ['common.css','javascript/webworkers.css'], 'js' : ['javascript/webworkers.js'] } %>
 
 <%- partial('partials/javascript-nav') %>
 
-<h3>Time Being Sent From a Web Worker</h3>
-<figure id="clock_id">
-  <figcaption>SLC Utah MST</figcaption>
-</figure>
-  
+<section class="main">
+
+  <p>The highest prime number discovered so far: <span class="primenum"></span></p>
+
+  <p>Number of prime numbers found: <span class="primescnt"></span></p>
+
+  <p>Last command: <span class="command"></span> </p>
+
+
+  <button class="startBtn" onclick="startPrimeNumberSearch()">Start</button>
+  <button class="pauseBtn" onclick="pauseResumePrimeNumberSearch()">Pause</button>
+  <button class="stopBtn" onclick="stopPrimeNumberSearch()">Stop</button>
+  <button class="speedUpBtn" onclick="speedUpPrimeNumberSearch()">2x Speed Up</button>
+  <button class="slowDownBtn" onclick="slowDownPrimeNumberSearch()">2x Slow Down</button>
+  <button class="disableBtn" onclick="disableWorker()">Disable Worker</button>
+
+</section>

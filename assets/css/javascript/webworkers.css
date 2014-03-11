@@ -1,7 +1,14 @@
-figure {
-  width: 20%;
+.command {
+  font-size: 14px;
+  color: indigo;
 }
 
-figcaption {
-  text-align:center;
+.primescnt {
+  font-size: 18px;
+  color: green;
+}
+
+.primenum {
+  font-size: 24px;
+  color: darkred;
 }

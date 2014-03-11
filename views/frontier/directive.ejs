@@ -1,11 +1,24 @@
 <% page = { 'title' : 'Frontier: Angular', 'key': 'FRONTIER_PAGE_NAME'} %>
-<% assets = { 'css' : ['common.css','frontier/angularUI.css'], 'js' : ['inject_0.4.0_a.js','angular-1.0.3.js','frontier/directiveUI.js'] } %>
+<% assets = { 'css' : ['common.css','frontier/angularUI.css','frontier/directiveUI.css'], 'js' : ['inject_0.4.0_a.js','angular-1.0.3.js','frontier/directiveUI.js'] } %>
 
 <%- partial('partials/frontier-nav') %>
 <section ng-app="myApp" ng-controller="myCtrl">
-	
-	<h3><%- t('page_purpose')%></h3>
-	<p my-highlight><%- t('server_date_time')%><the-time></the-time></p>
+
+<% if (feature("timeEx")) { %>
+
+	<h3><%= t('page_purpose')%></h3>
+	<h4><%= i18n('server_date_time') %></h4>
+
+  <p>
+    <the-time/>
+  </p>
+
+<% } else { %>
+
+<p>Server time is under construction!!</p>
+<p>To see the Server Time feature, turn it on by adding ?listEx to the url and setting "timeEx" experiment on.</p>
+
+<% } %>
 
 </section>
 

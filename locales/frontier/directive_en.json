@@ -1,7 +1,7 @@
 {
-  "page_purpose": "Custom Directive to return and display the time and to bind mouseover events.",
+  "page_purpose": "Custom directive to return and display the date, time and zodiac sign.",
   "server_date_time": "The server date and time is: ",
   "date_label": "Date: ",
   "time_label": "Time: ",
-  "fortune_label": "Fortune: "
+  "zodiac_label": "Zodiac Sign: "
 }

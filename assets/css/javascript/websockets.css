@@ -1,0 +1,14 @@
+
+.websocket textarea {
+  width: 700px;
+  font-size: 12px;
+  padding: 5px;
+}
+
+.websocket textarea.view-news  {
+  height: 300px;
+}
+
+.websocket textarea.user-input  {
+  height: 200px;
+}
