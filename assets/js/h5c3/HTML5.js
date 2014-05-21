@@ -10,13 +10,10 @@ $(document).ready(function() {
 
   // handle the changing of the guage
   // store the new value in local storage
-  $("[name='guage']").change( function(){
+  $("[name='guage']").on("change", function() {
     var newValue = $("[name='guage']").val();
     localStorage.guageValue = newValue;
     $("[name='result']").html("Value: "+newValue);
   });
-
-
-
 
 });

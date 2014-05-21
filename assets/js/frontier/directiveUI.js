@@ -14,6 +14,7 @@ myApp.controller("myCtrl", function($scope) {
 		'zodiac': ''
 	}
 
+  console.log("timeEx=",FS.showEx('timeEx'));
 	if (FS.showEx('timeEx')) {
 
     var tmpDateRes = '',
@@ -71,7 +72,6 @@ myApp.controller("myCtrl", function($scope) {
 		// when getDate() is done, use the month and day returned to get zodiac sign
     $.when(getDatePromise)
         .done(function (dateRes) {
-          //dateRes format = {"date": date, "dateStr":dateStr, "month": 1-12, "date": 1-31}
           $scope.getZodiac(dateRes.month, dateRes.date);
         })
         .fail(function () {

@@ -47,6 +47,11 @@
       <%- js(assets.js[i]) %>
     <% } %>
   <% } %>
+
+  <!-- defaultExperiments -->
+  <script type="text/javascript">
+    FS.defaultEx(<%- experimentsList %>);
+  </script>
   
 </body>
 </html>

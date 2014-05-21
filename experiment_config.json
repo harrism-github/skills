@@ -1,15 +1,10 @@
 {
-  "groups": {
-    "devs": ["stephen.lynn"]
-  },
+  "groups": {},
   "experiments": {
-    "extraParEx": 0,
-    "timeEx": false
+    "extraParEx": 1,
+    "timeEx": 1
   },
   "envs": {
-    "prod": {
-      "extraParEx": 0,
-      "timeEx": false
-    }
+
   }
 }

@@ -1,8 +1,8 @@
 @font-face {
-  font-family: 'Englebert';
+  font-family: 'AlexBrush';
   font-style: normal;
   font-weight: 400;
-  src: local('Englebert'), local('Englebert-Regular'), url(http://themes.googleusercontent.com/static/fonts/englebert/v1/5vhE18ztcHRcsYmBaZ6CaLO3LdcAZYWl9Si6vvxL-qU.woff) format('woff');
+  src: url('../img/font/AlexBrush-Regular.ttf') format('truetype');
 }
 
 section {
@@ -15,7 +15,7 @@ figure figcaption p{
     font-size: 10px;
 }
 #editable-content p{
-  font-size: 60%;
+  font-size: small;
   margin-top: -7px;
 }
 
@@ -45,28 +45,31 @@ form .zip{
 form input[type="tel"]{
   width: 150px;
 }
-
+form output {
+  padding-left: 10px;
+}
 
 #multi-backgrounds div{
   height:200px; 
-  width:100%;
+  width:400px;
   background-image:
-    url(sheep.png),
-    url(grass.png);
+    url(ladybug.png),
+    url(leaf.png);
   background-repeat: no-repeat;
-  background-position: center bottom, left bottom;
+  background-position: center center, center center;
 }
 #multi-backgrounds h3{
-  font-family: 'Englebert', sans-serif;
+  font-family: 'AlexBrush', serif;
+  font-size: 30px;
 }
-
 
 #opacity div.opacity-background{
   height:500px; 
   width:100%;
   background-image:
-    url(yellowfield.png);
+    url(earth-from-space.jpeg);
   background-repeat: no-repeat;
+  background-size: 1000px 500px;
   position:relative;
 }
 #opacity div.opacity-box{
@@ -76,13 +79,16 @@ form input[type="tel"]{
   left:100px;
   right:100px;
   background-color:#ffffff;
-  border:1px solid black;
+  border:3px solid black;
   opacity:0.6;
-  box-shadow: 10px 10px 5px #888888;
+  box-shadow: 10px 10px 25px lightgreen;
 }
 #opacity div.opacity-box p{
   margin:0px;
   padding:25px;
+  color: blue;
+  font-family: AlexBrush, serif;
+  font-size: 50px;
 }
 
 .gradientBox {
@@ -90,23 +96,43 @@ background: linear-gradient(top,  #ffb260 0%,#ff7f13 100%); /* W3C */
 }
 
 #gradient div{
-  height:200px; 
+  height:100px;
   width:100%;
 
-  background: -webkit-gradient(linear, left top, right top, from(#1a82f7), to(#2F2727));
-  background: -moz-linear-gradient(left, #2F2727, #1a82f7);
+  background: -webkit-gradient(linear, left top, right top, from(#1a82f7), to(#20ac33));
+  background: -moz-linear-gradient(left, #1a82f7, #20ac33);
 }
 
 #transition div{
-  height:100px; 
-  width:50%;
-  background-color: #1a82f7; 
-  transition:width 2s, background-color 2s;
-  -webkit-transition:width 2s, background-color 2s; 
+  height:100px;
+  width:100px;
+  border-radius:52px;
+  background-color: #1a82f7;
+  border: 3px solid green;
+  /*transition:width 2s, background-color 2s;*/
+  /*-webkit-transition:height 2s linear, width 2s linear, background-color 2s linear;*/
+  /*-webkit-transition-property: height, width, background-color, border-radius;*/
+  -webkit-transition-property: all;
+  -webkit-transition-duration: 4s;
+  -webkit-transition-timing-function: ease-in-out-sine;
+  -webkit-transition-delay: 1s;
+
+  transition-property: all;
+  transition-duration: 4s;
+  transition-timing-function: ease-in-out-sine;
+  transition-delay: 1s;
+}
+
+#transition div{
+  margin: 0 auto;
+  color: #fff;
 }
 #transition div:hover{
   width:100%;
-  background-color: #2F2727; 
+  height:50px;
+  background-color: #2F2727;
+  border-radius: 27px;
+  border: 3px solid red;
 }
 
 

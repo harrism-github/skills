@@ -9,18 +9,16 @@
 <figure>
   <img src="<%- img('h5c3_badge.jpg') %>" alt="H5/C3" />
   <figcaption>
-    <p>This is a "figcaption" on an image inside of a "figure" tag.</p>
+    <p>Figure caption using "figcaption"</p>
    </figcaption>
 </figure>
 </section>
 
 <section id="editable-content">
-  <h3> To-Do List </h3>
-  <p>Demonstrating Editable Content</p>
+  <h3> Editable To-Do List </h3>
+  <p>Demonstrating Editable Content (html5 small size)</p>
   <ul contenteditable="true">  
-    <li> Break mechanical cab driver. </li>  
-    <li> Drive to abandoned factory  
-    <li> Watch video of self </li>  
+    <li>Type list here...</li>
   </ul>
 </section>
 
@@ -28,16 +26,16 @@
   <h3> HTML5 Form</h3>
   <p>Demonstrating: Form Field Validation, Patterns, PlaceHolders, Email Input, Regular Expressions, Autofocus, guage element, output element, and local storage</p>
   <form>
-    <div><div>First Name:</div><input type="text" id="firstName" name="firstName" value="Robert" required pattern="[a-zA-Z\s]{1,50}" title="Please enter only letters a-z and A-Z" autofocus></div>
-    <div><div>Last Name:</div><input type="text" id="lastName" name="lastName" value="Whiting" required pattern="[a-zA-Z\s]{1,50}" title="Please enter only letters a-z and A-Z"></div>
-    <div><div>Street:</div><input type="text" id="street" name="street" value="752 E 1870 N" required pattern="[a-zA-Z0-9\s]{1,50}" title="Please enter only letters a-z, A-Z, and 0-9"></div>
-    <div><div>City:</div><input type="text" id="city" name="city" value="Orem" required pattern="[a-zA-Z\s]{1,50}" title="Please enter only letters a-z and A-Z"></div>
+    <div><div>First Name:</div><input type="text" id="firstName" name="firstName" required pattern="[a-zA-Z\s]{1,50}" title="Please enter only letters a-z and A-Z" autofocus></div>
+    <div><div>Last Name:</div><input type="text" id="lastName" name="lastName" required pattern="[a-zA-Z\s]{1,50}" title="Please enter only letters a-z and A-Z"></div>
+    <div><div>Street:</div><input type="text" id="street" name="street"  required pattern="[a-zA-Z0-9\s]{1,50}" title="Please enter only letters a-z, A-Z, and 0-9"></div>
+    <div><div>City:</div><input type="text" id="city" name="city" required pattern="[a-zA-Z\s]{1,50}" title="Please enter only letters a-z and A-Z"></div>
     <div><div>State:</div>
       <select>
-        <option value="utah">Utah</option>
-        <option value="idaho">Idaho</option>
         <option value="california">California</option>
-        <option value="Oregon">Oregon</option>
+        <option value="idaho">Idaho</option>
+        <option value="oregon">Oregon</option>
+        <option value="utah">Utah</option>
       </select>
     </div>
     <div><div>Zip:</div><input class="zip" type="text" id="zip" name="zip" required pattern="[0-9\-]{5,10}" title="Please enter only numbers 0-9"></div>
@@ -52,10 +50,12 @@
 </section>
 
 <section>
-  <h3>Video</h3>
+  <h3>Because of Him Video</h3>
   <p>
-    <video width="480" height="272" controls autoplay>
-      <source src="/img/big_buck_bunny_480x272.mp4" type="video/mp4">
+    <video width="480" height="272" controls autoplay preload="auto">
+      <source src="/img/Because-of-Him.mp4" type="video/mp4">
+      <source src="/img/Because-of-Him.webm" type="video/webm">
+      <source src="/img/Because-of-Him.ogv" type="video/ogg">
     </video>
   </p>
 
@@ -70,7 +70,7 @@
   <h3>Opacity with Drop Shadow</h3>
   <div class="opacity-background">
     <div class="opacity-box">
-      <p>Something goes here.</p>
+      <p>Earth from space...</p>
     </div>  
   </div>
 </section>
@@ -82,7 +82,8 @@
 
 <section id="transition">
   <h3>Demonstrating Transition</h3>
-  <div></div>
+  <div>
+  </div>
 </section>
   
 
